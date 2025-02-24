@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reales Schwarzes Loch Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Stellt sicher, dass die Ergebnisse in einer klaren Box erscheinen */
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-field {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        .search-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Inhalt der Simulation -->
+    <h1 class="title" style="color: black;">Reales Schwarzes Loch Simulation</h1>
+    <p class="subtitle" style="color: black;">Hier können Sie ein reales schwarzes Loch simulieren. Wählen Sie eines
+        aus:</p>
+    <p class="description" style="color: black;">Gib den Namen eines Schwarzen Lochs ein, um Informationen zu erhalten:
+    </p>
+
+    <!-- Suchfeld und Button -->
+    <div class="input-container">
+        <input type="text" id="blackHoleName" class="input-field" placeholder="z.B. Mrk335">
+        <button class="search-button" onclick="fetchBlackHoleInfo()">Suchen</button>
+    </div>
+
+    <!-- Ergebnis-Anzeige -->
+    <div id="result" class="result-box"></div>
+
+
+    <script src="script.js"></script>
+    <!-- Button nur auf dieser Seite sichtbar -->
+    <button id="backToHomeButton" onclick="window.location.href='index.html';">Zurück zur Startseite</button>
+
+    <script>
+        async function fetchBlackHoleInfo() {
+            const name = document.getElementById("blackHoleName").value.trim();
+            const resultDiv = document.getElementById("result");
+
+            if (!name) {
+                resultDiv.innerHTML = "<p style='color: red;'>Bitte gib einen Namen ein!</p>";
+                return;
+            }
+
+            resultDiv.innerHTML = "<p>Lade Daten...</p>";
+
+            try {
+                const response = await fetch(`http://localhost:8080/api/v1/blackholes/${name}`);
+                const data = await response.json();
+
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <h2>${data.name}</h2>
+                        <p><strong>Masse:</strong> ${data.mass}</p>
+                        <p><strong>Quelle:</strong> <a href="${data.source}" target="_blank">${data.source}</a></p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<p style='color: red;'>Fehler: ${data.error || "Daten nicht gefunden"}</p>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p style='color: red;'>Fehler beim Abrufen der Daten.</p>`;
+            }
+        }
+    </script>
+
+</body>
+
+
+
+</html>

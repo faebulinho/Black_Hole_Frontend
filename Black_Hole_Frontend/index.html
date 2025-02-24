@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schwarzes Loch Simulation</title>
+    <link rel="icon" href="Images/Black-Hole-Gargantua-scaled.png" sizes="20x16">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Video-Intro -->
+    <div id="intro">
+        <video id="introVideo" autoplay muted>
+            <source src="Videos/ScreenRecording_02-23-2025 22.mp4" type="video/mp4">
+        </video>
+        <button id="skipButton">Skip (Leertaste)</button>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div id="mainContent" class="hidden">
+        <h1 class="title">Willkommen zur Schwarzen-Loch-Simulation</h1>
+        <p class="subtitle">Hier kannst du interaktiv schwarze Löcher erkunden.</p>
+
+        <!-- Button-Container -->
+        <div class="button-container">
+            <a href="real_black_holes.html" class="button">
+                <span class="button-text">Reales Schwarzes Loch</span>
+                <img class="button-image" src="Images/Schwarzschild_Black_Hole.jpeg" alt="Reales Schwarzes Loch">
+            </a>
+
+            <a href="rotating_black_holes.html" class="button">
+                <span class="button-text">Drehendes Schwarzes Loch</span>
+                <img class="button-image" src="Images/Rotating_Black_Hole.gif" alt="Drehendes Schwarzes Loch">
+            </a>
+        </div>
+        <!-- Erklärender Text über Schwarze Löcher -->
+        <div class="description">
+            <h2>Was sind Schwarze Löcher?</h2><br>
+            <p>Schwarze Löcher sind eines der faszinierendsten Phänomene im Universum. Sie entstehen, wenn sehr
+                massereiche Sterne am Ende ihres Lebenszyklus kollabieren und dabei eine extrem starke Anziehungskraft
+                erzeugen. Diese Anziehungskraft ist so stark, dass nichts, nicht einmal Licht, entkommen kann – daher
+                der Name "schwarzes Loch".</p><br>
+            <p>Ein schwarzes Loch hat einen "Ereignishorizont", der die Grenze markiert, ab der nichts mehr entkommen
+                kann. Alles, was diesen Punkt überschreitet, wird unweigerlich ins Innere des schwarzen Lochs gezogen.
+                Innerhalb dieses Bereichs ist die Materie so stark komprimiert, dass die Schwerkraft unvorstellbar hoch
+                wird.</p><br>
+            <p>Es gibt verschiedene Arten von schwarzen Löchern, die nach ihrer Größe klassifiziert werden. Einige sind
+                winzig und existieren in den Kernen von sehr kleinen Sternen, während andere, sogenannte "supermassive
+                schwarze Löcher", Millionen bis Milliarden Mal schwerer sind als unsere Sonne und in den Zentren von
+                Galaxien gefunden werden können.</p><br>
+            <p>Trotz ihrer geheimnisvollen Natur sind schwarze Löcher nicht nur "gefährlich". Sie spielen auch eine
+                wichtige Rolle in der Struktur des Universums, indem sie zum Beispiel Galaxien zusammenhalten und den
+                Fluss von Materie und Energie beeinflussen. Die Forschung über schwarze Löcher hilft uns, die tiefsten
+                Geheimnisse der Schwerkraft und der Raumzeit zu verstehen.</p><br>
+            <p>In dieser Simulation kannst du erleben, wie es wäre, in die Nähe eines schwarzen Lochs zu kommen. Du
+                wirst die verzerrte Ansicht der Umgebung sehen, die durch die extreme Schwerkraft des schwarzen Lochs
+                entsteht – dies ist die Raumkrümmung, die von Albert Einstein vorhergesagt wurde. Durch diese Krümmung
+                wird der Raum selbst gebogen, was dazu führt, dass Licht und Materie in die Richtung des schwarzen Lochs
+                gezogen werden. Das macht die Entstehung von "Lichttrichtern" und die ungewöhnliche Perspektive, die du
+                hier sehen kannst, möglich.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
