@@ -77,6 +77,9 @@
     <h1 class="title">Reales Schwarzes Loch Simulation</h1>
     <p class="subtitle">Hier können Sie ein reales schwarzes Loch simulieren. Wählen Sie eines aus oder geben Sie einen Namen ein:</p>
 
+    <!-- Ergebnisanzeige -->
+    <div id="result" class="result-box"></div>
+
     <!-- Buttons für verschiedene Schwarze Löcher -->
     <div class="button-container">
         <button class="button" onclick="fetchBlackHoleInfo('Mrk335')">Mrk335</button>
@@ -145,9 +148,6 @@
         <button class="button" onclick="fetchBlackHoleInfo('PG1411+442')">PG1411+442</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC5548')">NGC5548</button>
     </div>
-
-    <!-- Ergebnisanzeige -->
-    <div id="result" class="result-box"></div>
 
     <!-- Button zurück zur Hauptseite -->
     <button id="backToHomeButton" onclick="window.location.href='index.html';">Zurück zur Startseite</button>
