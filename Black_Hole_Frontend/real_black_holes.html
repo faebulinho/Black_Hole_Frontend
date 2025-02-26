@@ -5,22 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reales Schwarzes Loch Simulation</title>
+    <link rel="icon" href="Images/Schwarzschild_Black_Hole.jpeg" sizes="20x16">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Stellt sicher, dass die Ergebnisse in einer klaren Box erscheinen */
-        .result-box {
-            margin-top: 20px;
-            padding: 15px;
-            border: 2px solid black;
-            background-color: white;
-            color: black;
-            display: inline-block;
-            text-align: left;
-            width: 300px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
+        /* Stil für die Suchbox */
         .input-container {
             margin-top: 20px;
             display: flex;
@@ -40,36 +28,90 @@
             font-size: 16px;
             cursor: pointer;
         }
+
+        /* Stil für die Button-Container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #03223e;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 18px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #054070;
+            transform: scale(1.05);
+        }
+
+        /* Stellt sicher, dass die Ergebnisse in einer klaren Box erscheinen */
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 
-<body> <!-- du elende aff-->
+<body>
 
-    <!-- Inhalt der Simulation -->
-    <h1 class="title" style="color: black;">Reales Schwarzes Loch Simulation</h1>
-    <p class="subtitle" style="color: black;">Hier können Sie ein reales schwarzes Loch simulieren. Wählen Sie eines
-        aus:</p>
-    <p class="description" style="color: black;">Gib den Namen eines Schwarzen Lochs ein, um Informationen zu erhalten:
-    </p>
+    <!-- Titel -->
+    <h1 class="title">Reales Schwarzes Loch Simulation</h1>
+    <p class="subtitle">Hier können Sie ein reales schwarzes Loch simulieren. Wählen Sie eines aus oder geben Sie einen Namen ein:</p>
 
-    <!-- Suchfeld und Button -->
+    <!-- Suchfeld -->
     <div class="input-container">
         <input type="text" id="blackHoleName" class="input-field" placeholder="z.B. Mrk335">
         <button class="search-button" onclick="fetchBlackHoleInfo()">Suchen</button>
     </div>
 
-    <!-- Ergebnis-Anzeige -->
+    <!-- Buttons für verschiedene Schwarze Löcher -->
+    <div class="button-container">
+        <button class="button" onclick="fetchBlackHoleInfo('Mrk335')">Mrk335</button>
+        <button class="button" onclick="fetchBlackHoleInfo('Mrk1501')">Mrk1501</button>
+        <button class="button" onclick="fetchBlackHoleInfo('PG0026+129')">PG0026+129</button>
+        <button class="button" onclick="fetchBlackHoleInfo('PG0052+251')">PG0052+251</button>
+        <button class="button" onclick="fetchBlackHoleInfo('Fairall9')">Fairall9</button>
+        <button class="button" onclick="fetchBlackHoleInfo('Mrk590')">Mrk590</button>
+        <button class="button" onclick="fetchBlackHoleInfo('Mrk1044')">Mrk1044</button>
+        <button class="button" onclick="fetchBlackHoleInfo('1H0323+342')">1H0323+342</button>
+        <button class="button" onclick="fetchBlackHoleInfo('3C120')">3C120</button>
+        <button class="button" onclick="fetchBlackHoleInfo('IRAS 04416+1215')">IRAS 04416+1215</button>
+        <button class="button" onclick="fetchBlackHoleInfo('H0507+164')">H0507+164</button>
+        <button class="button" onclick="fetchBlackHoleInfo('Ark120')">Ark120</button>
+    </div>
+
+    <!-- Ergebnisanzeige -->
     <div id="result" class="result-box"></div>
 
-
-    <script src="script.js"></script>
-    <!-- Button nur auf dieser Seite sichtbar -->
+    <!-- Button zurück zur Hauptseite -->
     <button id="backToHomeButton" onclick="window.location.href='index.html';">Zurück zur Startseite</button>
 
     <script>
-        async function fetchBlackHoleInfo() {
-            const name = document.getElementById("blackHoleName").value.trim();
+        async function fetchBlackHoleInfo(name = null) {
             const resultDiv = document.getElementById("result");
+
+            if (!name) {
+                name = document.getElementById("blackHoleName").value.trim();
+            }
 
             if (!name) {
                 resultDiv.innerHTML = "<p style='color: red;'>Bitte gib einen Namen ein!</p>";
@@ -98,7 +140,4 @@
     </script>
 
 </body>
-
-
-
 </html>

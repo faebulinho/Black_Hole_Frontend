@@ -1,294 +1,207 @@
 /* ========== Grundlegende Einstellungen für die gesamte Seite ========== */
-* {
-    margin: 0;
-    /* Entfernt den Standardrand */
-    padding: 0;
-    /* Entfernt die Standardinnenabstände */
-    box-sizing: border-box;
-    /* Stellt sicher, dass Padding & Border nicht die Gesamtgröße beeinflussen */
-    font-family: Arial, sans-serif;
-    /* Setzt die Standardschrift auf Arial */
+* { 
+    margin: 0; /* Entfernt den Standardrand */
+    padding: 0; /* Entfernt die Standardinnenabstände */
+    box-sizing: border-box; /* Stellt sicher, dass Padding & Border nicht die Gesamtgröße beeinflussen */
+    font-family: Arial, sans-serif; /* Setzt die Standardschrift auf Arial */
 }
 
 /* ========== Hintergrundbild-Einstellungen für den gesamten Body ========== */
 body {
-    background-image: url('Images/Hintergrund_Sternenhimmel.jpeg');
-    /* Hintergrundbild */
-    background-size: cover;
-    /* Bild wird so skaliert, dass es den ganzen Bildschirm füllt */
-    background-position: center;
-    /* Bild wird mittig ausgerichtet */
-    background-attachment: fixed;
-    /* Bild bleibt fixiert beim Scrollen */
-    color: white;
-    /* Weißer Text für bessere Lesbarkeit */
-    text-align: center;
-    /* Zentriert den Text */
-    min-height: 100vh;
-    /* Mindesthöhe: gesamte Bildschirmhöhe */
-    display: flex;
-    /* Ermöglicht die Verwendung von Flexbox */
-    flex-direction: column;
-    /* Ordnet die Inhalte vertikal */
-    align-items: center;
-    /* Zentriert die Inhalte horizontal */
-    justify-content: flex-start;
-    /* Startet die Inhalte von oben */
-    overflow: auto;
-    /* Falls nötig, kann gescrollt werden */
-    padding: 20px;
-    /* Fügt einen Abstand um den Inhalt hinzu */
+    background-image: url('Images/Hintergrund_Sternenhimmel.jpeg'); /* Hintergrundbild */
+    background-size: cover; /* Bild wird so skaliert, dass es den ganzen Bildschirm füllt */
+    background-position: center; /* Bild wird mittig ausgerichtet */
+    background-attachment: fixed; /* Bild bleibt fixiert beim Scrollen */
+    color: white; /* Weißer Text für bessere Lesbarkeit */
+    text-align: center; /* Zentriert den Text */
+    min-height: 100vh; /* Mindesthöhe: gesamte Bildschirmhöhe */
+    display: flex; /* Ermöglicht die Verwendung von Flexbox */
+    flex-direction: column; /* Ordnet die Inhalte vertikal */
+    align-items: center; /* Zentriert die Inhalte horizontal */
+    justify-content: flex-start; /* Startet die Inhalte von oben */
+    overflow: auto; /* Falls nötig, kann gescrollt werden */
+    padding: 20px; /* Fügt einen Abstand um den Inhalt hinzu */
 }
 
 /* ========== Intro-Bereich (Video-Einführung) ========== */
 #intro {
-    position: fixed;
-    /* Das Intro wird über alles gelegt */
+    position: fixed; /* Das Intro wird über alles gelegt */
     top: 0;
     left: 0;
-    width: 100%;
-    /* Bedeckt die gesamte Breite */
-    height: 100%;
-    /* Bedeckt die gesamte Höhe */
-    background-color: black;
-    /* Schwarzer Hintergrund */
-    display: flex;
-    /* Zentriert den Inhalt mit Flexbox */
+    width: 100%; /* Bedeckt die gesamte Breite */
+    height: 100%; /* Bedeckt die gesamte Höhe */
+    background-color: black; /* Schwarzer Hintergrund */
+    display: flex; /* Zentriert den Inhalt mit Flexbox */
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    /* Stellt sicher, dass es über allen anderen Elementen liegt */
+    z-index: 9999; /* Stellt sicher, dass es über allen anderen Elementen liegt */
 }
 
 /* ========== Video-Einstellungen ========== */
 #introVideo {
-    width: 100%;
-    /* Das Video nimmt die volle Breite ein */
-    height: 100%;
-    /* Das Video nimmt die volle Höhe ein */
-    object-fit: cover;
-    /* Das Video wird skaliert, um den gesamten Bereich zu füllen */
+    width: 100%; /* Das Video nimmt die volle Breite ein */
+    height: 100%; /* Das Video nimmt die volle Höhe ein */
+    object-fit: cover; /* Das Video wird skaliert, um den gesamten Bereich zu füllen */
 }
 
 /* ========== "Skip"-Button zum Überspringen des Videos ========== */
 #skipButton {
-    position: absolute;
-    /* Button wird relativ zum #intro positioniert */
-    top: 20px;
-    /* Abstand vom oberen Rand */
-    right: 20px;
-    /* Abstand vom rechten Rand */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Halbtransparenter schwarzer Hintergrund */
-    color: white;
-    /* Weißer Text */
-    padding: 15px 30px;
-    /* Innenabstand für besseren Klickbereich */
-    border: none;
-    /* Kein Rand */
-    cursor: pointer;
-    /* Zeigt die Hand als Mauszeiger */
-    border-radius: 5px;
-    /* Abgerundete Ecken */
-    font-size: 1.2rem;
-    /* Größere Schrift */
+    position: absolute; /* Button wird relativ zum #intro positioniert */
+    top: 20px; /* Abstand vom oberen Rand */
+    right: 20px; /* Abstand vom rechten Rand */
+    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter schwarzer Hintergrund */
+    color: white; /* Weißer Text */
+    padding: 15px 30px; /* Innenabstand für besseren Klickbereich */
+    border: none; /* Kein Rand */
+    cursor: pointer; /* Zeigt die Hand als Mauszeiger */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1.2rem; /* Größere Schrift */
 }
 
 /* Hover-Effekt für den "Skip"-Button */
 #skipButton:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Hintergrund wird dunkler */
+    background-color: rgba(0, 0, 0, 0.9); /* Hintergrund wird dunkler */
 }
 
 /* ========== Hauptinhalt der Webseite ========== */
 #mainContent {
-    opacity: 0;
-    /* Standardmäßig unsichtbar (wird später mit JavaScript eingeblendet) */
-    transition: opacity 1s ease-in-out;
-    /* Sanfte Einblendung */
-    max-width: 90%;
-    /* Begrenzt die Breite auf maximal 90% des Bildschirms */
-    margin-top: 50px;
-    /* Abstand nach oben */
+    opacity: 0; /* Standardmäßig unsichtbar (wird später mit JavaScript eingeblendet) */
+    transition: opacity 1s ease-in-out; /* Sanfte Einblendung */
+    max-width: 90%; /* Begrenzt die Breite auf maximal 90% des Bildschirms */
+    margin-top: 50px; /* Abstand nach oben */
 }
 
 /* ========== Überschriften & Untertitel ========== */
 .title {
-    font-size: 3rem;
-    /* Große Überschrift */
-    font-weight: bold;
-    /* Fettschrift */
-    margin-top: 30px;
-    /* Abstand nach oben */
+    font-size: 3rem; /* Große Überschrift */
+    font-weight: bold; /* Fettschrift */
+    margin-top: 30px; /* Abstand nach oben */
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    /* Etwas kleinere Schrift als die Überschrift */
-    margin-top: 10px;
-    /* Kleiner Abstand zur Überschrift */
+    font-size: 1.5rem; /* Etwas kleinere Schrift als die Überschrift */
+    margin-top: 10px; /* Kleiner Abstand zur Überschrift */
 }
 
 /* ========== Button-Container (hält alle Buttons) ========== */
 .button-container {
-    display: flex;
-    /* Flexbox für gleichmäßige Anordnung */
-    gap: 50px;
-    /* Abstand zwischen den Buttons */
-    justify-content: center;
-    /* Zentriert die Buttons */
-    margin-top: 50px;
-    /* Abstand nach oben */
-    flex-wrap: wrap;
-    /* Falls kein Platz ist, gehen Buttons in die nächste Zeile */
+    display: flex; /* Flexbox für gleichmäßige Anordnung */
+    gap: 50px; /* Abstand zwischen den Buttons */
+    justify-content: center; /* Zentriert die Buttons */
+    margin-top: 50px; /* Abstand nach oben */
+    flex-wrap: wrap; /* Falls kein Platz ist, gehen Buttons in die nächste Zeile */
+}
+
+.button-container-2 {
+    display: flex; /* Flexbox für gleichmäßige Anordnung */
+    gap: 20px; /* Abstand zwischen den Buttons */
+    justify-content: center; /* Zentriert die Buttons */
+    margin-top: 50px; /* Abstand nach oben */
+    flex-wrap: wrap; /* Falls kein Platz ist, gehen Buttons in die nächste Zeile */
 }
 
 /* ========== Buttons für Simulationen oder weitere Seiten ========== */
 .button {
-    display: flex;
-    /* Flexbox für bessere Anordnung */
-    flex-direction: column;
-    /* Elemente im Button werden vertikal angeordnet */
-    align-items: center;
-    /* Zentrierung */
+    display: flex; /* Flexbox für bessere Anordnung */
+    flex-direction: column; /* Elemente im Button werden vertikal angeordnet */
+    align-items: center; /* Zentrierung */
     justify-content: center;
-    background-color: #03223e;
-    /* Dunkelblauer Hintergrund */
-    border: none;
-    /* Kein Rand */
-    padding: 20px;
-    /* Innenabstand für besseren Klickbereich */
-    border-radius: 15px;
-    /* Abgerundete Ecken */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Sanfte Übergänge */
-    text-decoration: none;
-    /* Keine Unterstreichung für Links */
-    color: white;
-    /* Weißer Text */
-    width: 600px;
-    /* Feste Breite */
-    height: auto;
-    /* Automatische Höhe */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* Schatteneffekt */
+    background-color: #03223e; /* Dunkelblauer Hintergrund */
+    border: none; /* Kein Rand */
+    padding: 20px; /* Innenabstand für besseren Klickbereich */
+    border-radius: 15px; /* Abgerundete Ecken */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Sanfte Übergänge */
+    text-decoration: none; /* Keine Unterstreichung für Links */
+    color: white; /* Weißer Text */
+    width: 600px; /* Feste Breite */
+    height: auto; /* Automatische Höhe */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
 }
 
 /* Hover-Effekt für die Buttons */
 .button:hover {
-    background-color: #240872;
-    /* Farbe wechselt zu einem dunkleren Lila */
-    transform: scale(1.05);
-    /* Button wird leicht vergrößert */
+    background-color: #240872; /* Farbe wechselt zu einem dunkleren Lila */
+    transform: scale(1.05); /* Button wird leicht vergrößert */
 }
 
 /* ========== Bilder innerhalb der Buttons ========== */
 .button-image {
-    width: 100%;
-    /* Bild füllt den gesamten Button */
-    border-radius: 15px;
-    /* Abgerundete Ecken */
-    margin-top: 15px;
-    /* Abstand nach oben */
+    width: 100%; /* Bild füllt den gesamten Button */
+    border-radius: 15px; /* Abgerundete Ecken */
+    margin-top: 15px; /* Abstand nach oben */
 }
 
 /* ========== Button-Text ========== */
 .button-text {
-    font-size: 1.8rem;
-    /* Größere Schrift für bessere Sichtbarkeit */
-    font-weight: bold;
-    /* Fettschrift */
+    font-size: 1.8rem; /* Größere Schrift für bessere Sichtbarkeit */
+    font-weight: bold; /* Fettschrift */
 }
 
 /* ========== Responsives Design für mittlere Bildschirme (bis 1200px Breite) ========== */
 @media (max-width: 1200px) {
     .title {
-        font-size: 2.5rem;
-        /* Kleinere Überschrift */
+        font-size: 2.5rem; /* Kleinere Überschrift */
     }
-
+    
     .subtitle {
-        font-size: 1.3rem;
-        /* Kleinere Schrift für Untertitel */
+        font-size: 1.3rem; /* Kleinere Schrift für Untertitel */
     }
 
     .button-container {
-        flex-direction: column;
-        /* Buttons untereinander anordnen */
-        gap: 20px;
-        /* Weniger Abstand zwischen den Buttons */
+        flex-direction: column; /* Buttons untereinander anordnen */
+        gap: 20px; /* Weniger Abstand zwischen den Buttons */
     }
 
     .button {
-        width: 80%;
-        /* Buttons sind breiter */
+        width: 80%; /* Buttons sind breiter */
     }
 }
 
 /* ========== Responsives Design für kleine Bildschirme (bis 768px Breite) ========== */
 @media (max-width: 768px) {
     .title {
-        font-size: 2rem;
-        /* Noch kleinere Überschrift */
+        font-size: 2rem; /* Noch kleinere Überschrift */
     }
 
     .subtitle {
-        font-size: 1.2rem;
-        /* Kleinere Schrift für Untertitel */
+        font-size: 1.2rem; /* Kleinere Schrift für Untertitel */
     }
 
     .button {
-        width: 90%;
-        /* Buttons sind fast über die ganze Breite */
+        width: 90%; /* Buttons sind fast über die ganze Breite */
     }
 
     .button-text {
-        font-size: 1.5rem;
-        /* Kleinere Schrift für die Buttons */
+        font-size: 1.5rem; /* Kleinere Schrift für die Buttons */
     }
 }
 
 /* Button für 'Zurück zur Startseite' */
 #backToHomeButton {
-    position: fixed;
-    /* Fixiert den Button an einer bestimmten Position */
-    bottom: 20px;
-    /* Abstand vom unteren Rand */
-    right: 20px;
-    /* Abstand vom rechten Rand */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Hintergrundfarbe mit etwas Transparenz */
-    color: white;
-    /* Weißer Text */
-    padding: 15px 30px;
-    /* Abstand innerhalb des Buttons */
-    border: none;
-    /* Kein Rand */
-    cursor: pointer;
-    /* Zeigt den Hand-Cursor beim Überfahren */
-    border-radius: 5px;
-    /* Runde Ecken */
-    font-size: 1.2rem;
-    /* Schriftgröße */
-    z-index: 1000;
-    /* Stellt sicher, dass der Button über anderen Elementen liegt */
+    position: fixed; /* Fixiert den Button an einer bestimmten Position */
+    bottom: 20px; /* Abstand vom unteren Rand */
+    right: 20px; /* Abstand vom rechten Rand */
+    background-color: rgba(0, 0, 0, 0.7); /* Hintergrundfarbe mit etwas Transparenz */
+    color: white; /* Weißer Text */
+    padding: 15px 30px; /* Abstand innerhalb des Buttons */
+    border: none; /* Kein Rand */
+    cursor: pointer; /* Zeigt den Hand-Cursor beim Überfahren */
+    border-radius: 5px; /* Runde Ecken */
+    font-size: 1.2rem; /* Schriftgröße */
+    z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
 }
 
 /* Hover-Effekt für den Button */
 #backToHomeButton:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Der Hintergrund wird dunkler, wenn man mit der Maus darüber fährt */
+    background-color: rgba(0, 0, 0, 0.9); /* Der Hintergrund wird dunkler, wenn man mit der Maus darüber fährt */
 }
 
 /* Beschreibungstext über Schwarze Löcher */
 .description {
-    margin-top: 40px;
-    /* Abstand nach oben, um den Abstand zwischen den Buttons und dem Text zu erhöhen */
+    margin-top: 40px;  /* Abstand nach oben, um den Abstand zwischen den Buttons und dem Text zu erhöhen */
     line-height: 1.6;
     font-size: 1.2rem;
-    width: 100%;
-    /* Text über die ganze Breite */
+    width: 100%;  /* Text über die ganze Breite */
     text-align: middle;
-    padding: 0 20px;
-    /* Etwas Innenabstand, damit der Text nicht am Rand klebt */
+    padding: 0 20px;  /* Etwas Innenabstand, damit der Text nicht am Rand klebt */
 }
