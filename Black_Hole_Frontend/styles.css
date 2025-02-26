@@ -8,7 +8,7 @@
 
 /* ========== Hintergrundbild-Einstellungen für den gesamten Body ========== */
 body {
-    background-image: url('Images/Hintergrund_Sternenhimmel.jpeg'); /* Hintergrundbild */
+    background-image: url('Images/Hintergrund_Sternenhimmel.jpg'); /* Hintergrundbild */
     background-size: cover; /* Bild wird so skaliert, dass es den ganzen Bildschirm füllt */
     background-position: center; /* Bild wird mittig ausgerichtet */
     background-attachment: fixed; /* Bild bleibt fixiert beim Scrollen */
