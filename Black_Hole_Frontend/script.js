@@ -3,6 +3,8 @@ const skipButton = document.getElementById('skipButton');
 const intro = document.getElementById('intro');
 const mainContent = document.getElementById('mainContent');
 const introVideo = document.getElementById('introVideo');
+const loginPage = document.getElementById("loginPage");
+
 
 // Geschwindigkeit des Videos erhöhen (z.B. auf das 3,5-fache der normalen Geschwindigkeit)
 introVideo.playbackRate = 3.5;  // Video läuft schneller
