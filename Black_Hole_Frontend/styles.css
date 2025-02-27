@@ -205,99 +205,107 @@ body {
     text-align: middle;
     padding: 0 20px;  /* Etwas Innenabstand, damit der Text nicht am Rand klebt */
 }
-#loginTitle{
-    font-size: 200px
-}
 
+
+/* #loginPage: Zentriert das Login-Formular auf der Seite */
 #loginPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Damit es zentriert ist */
-    text-align: center;
+    display: flex; /* Flexbox-Layout aktivieren */
+    flex-direction: column; /* Die Elemente im Login-Container werden vertikal ausgerichtet */
+    align-items: center; /* Zentriert die Elemente horizontal */
+    justify-content: center; /* Zentriert die Elemente vertikal */
+    height: 75vh; /* Stellt sicher, dass das Container die volle Bildschirmhöhe einnimmt */
+    text-align: center; /* Text wird im Container zentriert */
 }
 
+/* #loginForm: Stile für das Anmeldeformular */
 #loginForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    height: auto;
-    width: 600px; /* Diese Breite kannst du hier anpassen, z.B. 500px für breiteres Formular */
+    display: flex; /* Flexbox-Layout für das Formular */
+    flex-direction: column; /* Elemente des Formulars werden vertikal angeordnet */
+    align-items: center; /* Zentriert die Formularelemente horizontal */
+    gap: 20px; /* Fügt einen Abstand von 20px zwischen den Elementen hinzu */
+    padding: 30px; /* Innenabstand des Formulars */
+    background-color: rgba(0, 0, 0, 0.8); /* Dunkler halbtransparenter Hintergrund */
+    border-radius: 12px; /* Abgerundete Ecken des Formulars */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Schattierung für das Formular */
+    height: auto; /* Höhe passt sich dem Inhalt an */
+    width: 500px; /* Breite des Formulars */
 }
 
+/* #loginForm label: Stile für die Labels im Formular */
 #loginForm label {
-    font-size: 20px;
-    color: white;
+    font-size: 20px; /* Schriftgröße der Labels */
+    color: white; /* Textfarbe der Labels */
 }
 
+/* #loginForm input: Stile für die Eingabefelder im Formular */
 #loginForm input {
-    padding: 15px;
-    font-size: 18px;
-    width: 100%;
-    border-radius: 8px;
-    border: 2px solid white;
-    background-color: white; /* Hintergrund auf WEISS setzen */
-    color: black; /* Textfarbe auf SCHWARZ setzen */
+    padding: 15px; /* Innenabstand der Eingabefelder */
+    font-size: 18px; /* Schriftgröße im Eingabefeld */
+    width: 100%; /* Eingabefelder nehmen die gesamte Breite des Formulars ein */
+    border-radius: 8px; /* Abgerundete Ecken für die Eingabefelder */
+    border: 2px solid white; /* Weißer Rand um die Eingabefelder */
+    background-color: white; /* Weißer Hintergrund für die Eingabefelder */
+    color: black; /* Schwarzer Text in den Eingabefeldern */
 }
 
+/* #loginForm input::placeholder: Stile für den Platzhaltertext in den Eingabefeldern */
 #loginForm input::placeholder {
-    color: gray; /* Platzhalter-Text grau für bessere Lesbarkeit */
+    color: gray; /* Grauer Platzhaltertext für bessere Lesbarkeit */
 }
 
+/* #loginForm input:focus: Stile für die Eingabefelder, wenn sie fokussiert werden */
 #loginForm input:focus {
-    border-color: cyan;
-    outline: none;
+    border-color: #096ec6; /* Cyan-Farbe für den Rand, wenn das Eingabefeld fokussiert wird */
+    outline: none; /* Entfernt die Standard-Umrandung */
 }
 
+/* #loginForm button: Stile für den Anmeldebutton */
 #loginForm button {
-    padding: 15px 30px;
-    font-size: 20px;
-    background-color: #096ec6;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    transition: 0.3s;
+    padding: 15px 30px; /* Innenabstand für den Button */
+    font-size: 20px; /* Schriftgröße des Buttons */
+    background-color: #096ec6; /* Hintergrundfarbe des Buttons */
+    color: black; /* Textfarbe des Buttons */
+    border: none; /* Entfernt den Standard-Rand */
+    border-radius: 8px; /* Abgerundete Ecken für den Button */
+    cursor: pointer; /* Zeigt einen Zeiger-Cursor an, wenn der Button überfahren wird */
+    width: 100%; /* Button nimmt die gesamte Breite des Formulars ein */
+    transition: 0.3s; /* Weicher Übergang für Hover-Effekte */
 }
 
+/* #loginForm button:hover: Stile für den Button, wenn er überfahren wird */
 #loginForm button:hover {
-    background-color: white;
-    color: black;
+    background-color: white; /* Weißer Hintergrund beim Überfahren */
+    color: black; /* Schwarze Textfarbe beim Überfahren */
 }
 
+/* #goToMain: Stile für den Button, der zur Hauptseite führt */
 #goToMain {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #03223e;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    position: fixed; /* Fixiert den Button an einer festen Position auf dem Bildschirm */
+    bottom: 20px; /* 20px Abstand vom unteren Rand des Bildschirms */
+    right: 20px; /* 20px Abstand vom rechten Rand des Bildschirms */
+    padding: 10px 20px; /* Innenabstand für den Button */
+    font-size: 18px; /* Schriftgröße des Buttons */
+    background-color: #03223e; /* Dunkelblaue Hintergrundfarbe */
+    color: white; /* Weiße Textfarbe */
+    border: none; /* Entfernt den Standard-Rand */
+    border-radius: 8px; /* Abgerundete Ecken für den Button */
+    cursor: pointer; /* Zeigt einen Zeiger-Cursor an, wenn der Button überfahren wird */
 }
 
+/* #goToMain:hover: Stile für den Button, wenn er überfahren wird */
 #goToMain:hover {
-    background-color: darkblue;
+    background-color: darkblue; /* Dunkelblaue Hintergrundfarbe beim Überfahren */
 }
 
-/* Button zur Hauptseite */
+/* Wiederholung des Stils für #goToMain, was unnötig ist und entfernt werden kann */
 #goToMain {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #03223e;
-    color: white;
-    border: none;
-    cursor: pointer;
+    position: fixed; /* Fixiert den Button an einer festen Position auf dem Bildschirm */
+    bottom: 20px; /* 20px Abstand vom unteren Rand des Bildschirms */
+    right: 20px; /* 20px Abstand vom rechten Rand des Bildschirms */
+    padding: 10px 15px; /* Innenabstand für den Button */
+    font-size: 16px; /* Schriftgröße des Buttons */
+    background-color: #03223e; /* Dunkelblaue Hintergrundfarbe */
+    color: white; /* Weiße Textfarbe */
+    border: none; /* Entfernt den Standard-Rand */
+    cursor: pointer; /* Zeigt einen Zeiger-Cursor an, wenn der Button überfahren wird */
 }
