@@ -5,9 +5,17 @@ const mainContent = document.getElementById('mainContent');
 const introVideo = document.getElementById('introVideo');
 const loginPage = document.getElementById("loginPage");
 
+// Hinzufügen eines Eventlisteners für den Button, der zur Index-Seite zurückführt
+const backToHomeButton = document.getElementById('backToHomeButton');
+if (backToHomeButton) {
+    backToHomeButton.addEventListener('click', function() {
+        window.location.href = 'index.html';  // Leitet zur index.html-Seite weiter
+    });
+}
 
-// Geschwindigkeit des Videos erhöhen (z.B. auf das 3,5-fache der normalen Geschwindigkeit)
-introVideo.playbackRate = 3.5;  // Video läuft schneller
+
+// Geschwindigkeit des Videos erhöhen
+introVideo.playbackRate = 3.5; 
 
 // Funktion zum Überspringen des Intros
 function skipIntro() {
