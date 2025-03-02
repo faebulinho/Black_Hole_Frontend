@@ -45,7 +45,8 @@ Mögliche Verbesserungen für zukünftige Versionen:
 
 Code von: https://github.com/brunosimon/webgl-black-hole
 
-Installation
+Installation:
+
 Damit man überhaupt alle benötigten Pakte gebrauchen kann, muss man zuerst einmal folgendes herunterladen(Anweisungen folgen auf der Seite):
 
 https://nodejs.org/en/download/
