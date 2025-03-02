@@ -30,8 +30,8 @@ Projektordner/
 2. Öffne die Datei `index.html` in einem Webbrowser.
 
 ## Technologien
-- **HTML5**: Strukturierung der Webseite
-- **CSS3**: Gestaltung und Design
+- **HTML**: Strukturierung der Webseite
+- **CSS**: Gestaltung und Design
 - **JavaScript**: Interaktive Elemente und Simulationen
 
 ## Erweiterungen
