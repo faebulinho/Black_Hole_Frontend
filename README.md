@@ -1,7 +1,7 @@
 # Schwarzes Loch Simulation
 
 ## Beschreibung
-Dieses Projekt ist eine interaktive Web-Anwendung zur Simulation von Schwarzen Löchern. Nutzer können verschiedene Arten von Schwarzen Löchern erkunden und mehr über ihre physikalischen Eigenschaften erfahren.
+Dieses Projekt ist eine interaktive Webseite zur Simulation von Schwarzen Löchern. Nutzer können verschiedene Arten von Schwarzen Löchern erkunden und mehr über ihre physikalischen Eigenschaften erfahren. Das nötige Backend zu der Webseite ist unter https://github.com/faebulinho/Black_Hole_Backend zu finden.
 
 ## Projektstruktur
 ```
@@ -23,11 +23,12 @@ Projektordner/
 - **Visuelle Simulation:** Bilder und Darstellungen von Schwarzen Löchern zur besseren Veranschaulichung.
 
 ## Installation & Nutzung
-1. Lade das Projekt herunter oder klone es mit:
+1. Backend installieren: siehe https://github.com/faebulinho/Black_Hole_Backend
+2. Lade das Projekt herunter oder klone es mit:
    ```bash
    git clone https://github.com/dein-username/schwarzes-loch-simulation.git
    ```
-2. Öffne die Datei `index.html` in einem Webbrowser.
+3. Öffne die Datei `index.html` in einem Webbrowser.
 
 ## Technologien
 - **HTML**: Strukturierung der Webseite
