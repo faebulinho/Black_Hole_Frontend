@@ -23,7 +23,7 @@ Projektordner/
 - **Visuelle Simulation:** Bilder und Darstellungen von Schwarzen Löchern zur besseren Veranschaulichung.
 
 ## Installation & Nutzung
-1. Backend installieren: siehe https://github.com/faebulinho/Black_Hole_Backend
+1. Backend installieren Siehe: https://github.com/faebulinho/Black_Hole_Backend
 2. Lade das Projekt herunter oder klone es mit:
    ```bash
    git clone https://github.com/dein-username/schwarzes-loch-simulation.git
