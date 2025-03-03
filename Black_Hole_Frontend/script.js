@@ -1,54 +1,39 @@
-// Grundlegende Elemente
-const skipButton = document.getElementById('skipButton');
-const intro = document.getElementById('intro');
-const mainContent = document.getElementById('mainContent');
-const introVideo = document.getElementById('introVideo');
-const loginPage = document.getElementById("loginPage");
-
-// Hinzufügen eines Eventlisteners für den Button, der zur Index-Seite zurückführt
-const backToHomeButton = document.getElementById('backToHomeButton');
-if (backToHomeButton) {
-    backToHomeButton.addEventListener('click', function() {
-        window.location.href = 'index.html';  // Leitet zur index.html-Seite weiter
-    });
-}
-
+const skipButton = document.getElementById('skipButton');  // Button, um das Intro zu überspringen
+const intro = document.getElementById('intro');  // Element für das Intro
+const mainContent = document.getElementById('mainContent');  // Element für den Hauptinhalt der Seite
+const introVideo = document.getElementById('introVideo');  // Das Video, das beim Starten der Seite abgespielt wird
+const loginPage = document.getElementById("loginPage");  // Element für die Login-Seite
 
 // Geschwindigkeit des Videos erhöhen
 introVideo.playbackRate = 3.5; 
 
 // Funktion zum Überspringen des Intros
 function skipIntro() {
-    intro.style.display = 'none';  // Intro ausblenden
-    mainContent.style.opacity = 1;  // Hauptinhalt einblenden
+    intro.style.display = 'none';  // Beendet intro --> nicht mehr im Layout der Seite angezeigt
+    mainContent.style.opacity = 1;  // vollständig sichtbar, indem es die Transparenz auf 100% setzt.
 
-    // Warte kurz, dann scrolle nach oben (damit der Browser Zeit hat, die Anzeige zu aktualisieren)
+    // Warte kurz, dann scrolle nach oben
     setTimeout(() => {
         window.scrollTo(0, 0);
     }, 100);
 }
 
-// Wenn das Video beendet ist, blende das Intro aus und zeige den Hauptinhalt
-introVideo.onended = skipIntro;
+introVideo.onended = skipIntro; // Wenn das Video beendet ist, wird Funktion skipIntro ausgeführt
 
-// Wenn der Skip-Button gedrückt wird, überspringe das Video
-skipButton.addEventListener('click', skipIntro);
+skipButton.addEventListener('click', skipIntro);// Wenn der Skip-Button gedrückt wird,  wird Funktion skipIntro ausgeführt
 
-// Wenn die Leertaste gedrückt wird, überspringe das Video
 window.addEventListener('keydown', (event) => {
+    // Überprüfen, ob die gedrückte Taste die Leertaste ist
     if (event.key === ' ' || event.keyCode === 32) {  // Leertaste
         event.preventDefault(); // Verhindert das Scrollen der Seite durch die Leertaste
-        skipIntro();
+        skipIntro(); // Ruft die Funktion auf
     }
 });
 
-// Video und Intro beim Laden der Seite starten
+// Beim Laden der Seite wird dieser Code ausgeführt
 window.onload = () => {
-    intro.style.display = 'flex';  // Sicherstellen, dass das Intro angezeigt wird
-    introVideo.play();  // Video abspielen
+    intro.style.display = 'flex';  // Stellt sicher, dass das Intro sichtbar ist, indem es auf 'flex' gesetzt wird
+    introVideo.play();  // Startet das Intro-Video
 
-    // Scrollt nach ganz oben nach einer kurzen Verzögerung
-    setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 50);
+    setTimeout(() => window.scrollTo(0, 0), 50);  // Scrollt die Seite nach 50 Millisekungden ganz nach oben
 };

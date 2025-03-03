@@ -19,9 +19,9 @@
     </div>
 
     <!-- Anmeldeformular -->
-     <br>
-    <h1 class="title">Schwarzen-Loch-Simulation</h1>
-    <div id="loginPage" class="hidden">
+    <br>
+    <h1 class="title">Schwarze-Loch-Simulation</h1>
+    <div id="loginPage">
         <h1>Anmeldung</h1>
         <form id="loginForm">
             <label for="email">E-Mail:</label>
@@ -30,11 +30,15 @@
             <label for="password">Passwort:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Anmelden</button>
+            <!-- Container für Anmelde- und Registrierungsbutton -->
+            <div class="button-container">
+                <button type="submit">Anmelden</button>
+                <button type="button" onclick="window.location.href='register.html'">Registrieren</button>
+            </div>
         </form>
     </div>
 
-    <!-- Button unten rechts zur Hauptseite -->
+    <!-- Button zur Hauptseite -->
     <button id="goToMain" onclick="window.location.href='index.html'">Zur Hauptseite</button>
 
     <script src="script.js"></script>

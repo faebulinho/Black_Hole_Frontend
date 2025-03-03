@@ -275,6 +275,100 @@ body {
     background-color: white; 
     color: black; 
 }
+/* Registrierungsseite Layout */
+#registerPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    text-align: center;
+}
+
+/* Registrierungsformular */
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    height: auto;
+    width: 900px;
+}
+
+/* Name/Vorname & E-Mail/Passwort in einer Zeile */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Eingabefelder in der Zeile */
+.input-row div {
+    width: 48%; /* Jedes Feld nimmt fast die Hälfte der Zeile ein */
+}
+
+/* Labels für Eingabefelder */
+#registerForm label {
+    font-size: 18px;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Stil für die Eingabefelder */
+#registerForm input {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+
+/* Platzhalterfarbe */
+#registerForm input::placeholder {
+    color: gray;
+}
+
+/* Fokus-Stil für Inputs */
+#registerForm input:focus {
+    border-color: #096ec6;
+    outline: none;
+}
+
+/* Button-Container für gleichmäßige Anordnung */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Buttons */
+.button-container button {
+    flex: 1;
+    margin: 5px;
+    padding: 15px;
+    background-color: #096ec6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover-Effekt */
+.button-container button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
 
 /* #goToMain: Stile für den Button, der zur Hauptseite führt */
 #goToMain {

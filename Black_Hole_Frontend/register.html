@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung - Schwarze Loch Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="title">Schwarze-Loch-Simulation</h1>
+
+    <!-- Registrierungsformular -->
+    <div id="registerPage">
+        <h1>Registrierung</h1>
+        <form id="registerForm">
+            
+            <!-- Name & Vorname in einer Zeile -->
+            <div class="input-row">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="surname">Vorname:</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+            </div>
+
+            <!-- E-Mail & Passwort in einer Zeile -->
+            <div class="input-row">
+                <div>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Passwort:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+
+            <!-- Buttons nebeneinander -->
+            <div class="button-container">
+                <button type="submit">Registrieren</button>
+                <button type="button" onclick="window.location.href='login.html'">Zum Login</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Button zur Hauptseite -->
+    <button id="goToMain" onclick="window.location.href='index.html'">Zur Hauptseite</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
