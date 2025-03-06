@@ -25,18 +25,18 @@ async function fetchBlackHoleInfo(name = null) {
 
         // Überprüft, ob die Antwort der API erfolgreich war.
         if (response.ok) {
-            // Wenn die Antwort erfolgreich war, werden die Daten angezeigt.
+
             resultDiv.innerHTML = `
                 <h2>${data.name}</h2>
                 <p><strong>Masse:</strong> ${data.mass}</p>
                 <p><strong>Quelle:</strong> <a href="${data.source}" target="_blank">${data.source}</a></p>
             `;
         } else {
-            // Wenn ein Fehler in den Daten oder der Anfrage war, wird eine Fehlermeldung angezeigt.
+            // Fehlermeldung falls Fehler
             resultDiv.innerHTML = `<p style='color: red;'>Fehler: ${data.error || "Daten nicht gefunden"}</p>`;
         }
     } catch (error) {
-        // Falls ein Fehler beim Abrufen der Daten auftritt (z.B. Netzwerkfehler), wird eine Fehlermeldung angezeigt.
+        // Falls ein Fehler beim Abrufen der Daten auftritt => Fehlermeldung
         resultDiv.innerHTML = `<p style='color: red;'>Fehler beim Abrufen der Daten.</p>`;
     }
 }
