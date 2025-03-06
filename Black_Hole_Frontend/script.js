@@ -5,7 +5,7 @@ const introVideo = document.getElementById('introVideo');  // Das Video, das bei
 const loginPage = document.getElementById("loginPage");  // Element für die Login-Seite
 
 // Geschwindigkeit des Videos erhöhen
-introVideo.playbackRate = 3.5; 
+introVideo.playbackRate = 3.5;
 
 // Funktion zum Überspringen des Intros
 function skipIntro() {
