@@ -75,7 +75,8 @@
 
     <!-- Titel -->
     <h1 class="title">Reales Schwarzes Loch Simulation</h1>
-    <p class="subtitle">Hier können Sie ein reales schwarzes Loch simulieren. Wählen Sie eines aus oder geben Sie einen Namen ein:</p>
+    <p class="subtitle">Hier können Sie ein reales schwarzes Loch simulieren. Wählen Sie eines aus oder geben Sie einen
+        Namen ein:</p>
 
     <!-- Ergebnisanzeige -->
     <div id="result" class="result-box"></div>
@@ -152,39 +153,10 @@
     <!-- Button zurück zur Hauptseite -->
     <button id="backToHomeButton" onclick="window.location.href='index.html';">Zurück zur Startseite</button>
 
-    <script>
-        async function fetchBlackHoleInfo(name = null) {
-            const resultDiv = document.getElementById("result");
 
-            if (!name) {
-                name = document.getElementById("blackHoleName").value.trim();
-            }
-
-            if (!name) {
-                resultDiv.innerHTML = "<p style='color: red;'>Bitte gib einen Namen ein!</p>";
-                return;
-            }
-
-            resultDiv.innerHTML = "<p>Lade Daten...</p>";
-
-            try {
-                const response = await fetch(`http://localhost:8080/api/v1/blackholes/${name}`);
-                const data = await response.json();
-
-                if (response.ok) {
-                    resultDiv.innerHTML = `
-                        <h2>${data.name}</h2>
-                        <p><strong>Masse:</strong> ${data.mass}</p>
-                        <p><strong>Quelle:</strong> <a href="${data.source}" target="_blank">${data.source}</a></p>
-                    `;
-                } else {
-                    resultDiv.innerHTML = `<p style='color: red;'>Fehler: ${data.error || "Daten nicht gefunden"}</p>`;
-                }
-            } catch (error) {
-                resultDiv.innerHTML = `<p style='color: red;'>Fehler beim Abrufen der Daten.</p>`;
-            }
-        }
-    </script>
+    <!-- Script für Infos von Schwarzem Loch zu holen (Verbindung zu Backend)-->
+    <script src="blackHoleInfo.js"></script>
 
 </body>
+
 </html>
