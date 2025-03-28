@@ -217,6 +217,10 @@ body {
 
 /* #loginForm: Stile für das Anmeldeformular */
 #loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -276,17 +280,23 @@ body {
     color: black; 
 }
 /* Registrierungsseite Layout */
+/* Registrierungsseite Layout */
 #registerPage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Stellt sicher, dass der Inhalt von oben nach unten beginnt */
     height: 75vh;
     text-align: center;
+    margin-top: 8%; /* Verschiebt den gesamten Inhalt um 10% der Containerhöhe nach oben */
 }
 
 /* Registrierungsformular */
 #registerForm {
+    position: absolute; /* Um es absolut relativ zum Viewport zu positionieren */
+    top: 50%; /* Beispiel für 40% Abstand zum oberen Rand der Seite */
+    left: 50%;
+    transform: translate(-50%, -40%); /* Anpassen der vertikalen Verschiebung */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -341,6 +351,7 @@ body {
     outline: none;
 }
 
+
 /* Button-Container für gleichmäßige Anordnung */
 .button-container {
     display: flex;
@@ -373,31 +384,24 @@ body {
 /* #goToMain: Stile für den Button, der zur Hauptseite führt */
 #goToMain {
     position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 10px 20px; 
-    font-size: 18px; 
+    font-size: 28px; 
     background-color: #03223e; 
     color: white; 
     border: none; 
-    border-radius: 8px; 
-    cursor: pointer; 
+    border-radius: 15px; 
+    cursor: pointer;
+    width: 300px;
+    height: 70px;
+    transition: transform 0.2s ease-in-out; /* Weiche Animation */
 }
 
 /* #goToMain:hover: Stile für den Button, wenn er überfahren wird */
 #goToMain:hover {
-    background-color: darkblue; 
-}
-
-/* Wiederholung des Stils für #goToMain, was unnötig ist und entfernt werden kann */
-#goToMain {
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    padding: 10px 15px; 
-    font-size: 16px; 
-    background-color: #03223e; 
-    color: white; 
-    border: none; 
-    cursor: pointer; 
+    background-color: white; 
+    color: black;
+    transform: translate(-50%, -50%) scale(1.05); /* Vergrößert den Button um 10%, bleibt aber zentriert */
 }
