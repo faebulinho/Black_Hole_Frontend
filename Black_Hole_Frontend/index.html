@@ -57,6 +57,29 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Die bestehenden Links zur Seite "Rotierende Schwarze Löcher" anpassen
+        document.addEventListener('DOMContentLoaded', function () {
+            // Alle Links zur rotating_black_hole.html suchen
+            // Diese Zeile müssen Sie möglicherweise anpassen, je nachdem wie Ihre Links aufgebaut sind
+            const rotatingBlackHoleLinks = document.querySelectorAll('a[href="rotating_black_hole.html"], button[onclick*="rotating_black_hole.html"]');
+
+            // Alle gefundenen Links bearbeiten, um den userType beizubehalten
+            rotatingBlackHoleLinks.forEach(link => {
+                if (link.tagName === 'A') {
+                    // Bei <a>-Tags den href-Wert bearbeiten
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        window.location.href = 'rotating_black_hole.html';
+                    });
+                } else if (link.tagName === 'BUTTON') {
+                    // Bei <button>-Tags mit onclick die onclick-Funktion überschreiben
+                    const originalOnclick = link.getAttribute('onclick');
+                    link.setAttribute('onclick', 'event.preventDefault(); window.location.href = "rotating_black_hole.html";');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

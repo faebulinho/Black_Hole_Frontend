@@ -32,16 +32,38 @@
 
             <!-- Container für Anmelde- und Registrierungsbutton -->
             <div class="button-container">
-                <button type="submit">Anmelden</button>
+                <button type="submit" onclick="loginUser(event)">Anmelden</button>
                 <button type="button" onclick="window.location.href='register.html'">Registrieren</button>
             </div>
         </form>
     </div>
 
-    <!-- Button zur Hauptseite -->
-    <button id="goToMain" onclick="window.location.href='index.html'">Als Gast benutzen</button>
+    <!-- Button zur Hauptseite, als Gast reingehen -->
+    <button id="goToMain" onclick="guestAccess()">Als Gast benutzen</button>
 
     <script src="script.js"></script>
+    <script>
+        // Funktion für die Anmeldung
+        function loginUser(event) {
+            event.preventDefault();
+            // Hier könnte später die eigentliche Login-Logik stehen
+
+            // Benutzer als eingeloggt markieren im localStorage
+            localStorage.setItem('userType', 'loggedIn');
+
+            // Weiterleitung zur Hauptseite
+            window.location.href = 'index.html';
+        }
+
+        // Funktion für den Gast-Zugang
+        function guestAccess() {
+            // Benutzer als Gast markieren im localStorage
+            localStorage.setItem('userType', 'guest');
+
+            // Weiterleitung zur Hauptseite
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 
 </html>

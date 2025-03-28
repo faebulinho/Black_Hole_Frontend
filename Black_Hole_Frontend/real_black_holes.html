@@ -31,23 +31,36 @@
 
         /* Stil für die Button-Container */
         .button-container {
-        display: flex;
-        flex-direction: column; /* Buttons untereinander anordnen */
-        align-items: center; /* Buttons zentrieren */
-        gap: 10px; /* Abstand zwischen den Buttons */
-        margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            /* Buttons in mehreren Zeilen anordnen */
+            justify-content: center;
+            /* Buttons horizontal zentrieren */
+            gap: 8px;
+            /* Kleinerer Abstand zwischen den Buttons */
+            margin-top: 20px;
+            max-width: 90%;
+            /* Maximale Breite begrenzen */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .button {
             background-color: #03223e;
             color: white;
             border: none;
-            padding: 15px 30px;
-            border-radius: 12px;
-            font-size: 18px;
+            padding: 8px 15px;
+            /* Kleineres Padding für kompaktere Buttons */
+            border-radius: 8px;
+            font-size: 16px;
+            /* Kleinere Schrift */
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
+            margin: 0;
+            /* Margin entfernen */
+            flex-grow: 0;
+            /* Verhindert, dass Buttons zu breit werden */
         }
 
         .button:hover {
@@ -78,6 +91,16 @@
     <p class="subtitle">Hier können Sie ein reales schwarzes Loch simulieren. Wählen Sie eines aus oder geben Sie einen
         Namen ein:</p>
 
+    <!-- Container für die Suchbox (falls vorhanden) und den Simulations-Button -->
+    <div style="position: relative; width: 100%; margin-bottom: 20px;">
+        <!-- Simulations-Button (rechts positioniert) -->
+        <div style="position: absolute; right: 20px; top: 0;">
+            <button id="goToSimulationButton"
+                style="font-size: 1.2rem; padding: 10px 20px; background-color: #9370DB; color: white; border: none; border-radius: 5px; cursor: pointer;"
+                onclick="window.location.href='simulation.html'">Gehe zur Simulation</button>
+        </div>
+    </div>
+
     <!-- Ergebnisanzeige -->
     <div id="result" class="result-box"></div>
 
@@ -89,10 +112,7 @@
         <button class="button" onclick="fetchBlackHoleInfo('PG0052+251')">PG0052+251</button>
         <button class="button" onclick="fetchBlackHoleInfo('Fairall9')">Fairall9</button>
         <button class="button" onclick="fetchBlackHoleInfo('Mrk590')">Mrk590</button>
-        <button class="button" onclick="fetchBlackHoleInfo('Mrk1044')">Mrk1044</button>
-        <button class="button" onclick="fetchBlackHoleInfo('1H0323+342')">1H0323+342</button>
         <button class="button" onclick="fetchBlackHoleInfo('3C120')">3C120</button>
-        <button class="button" onclick="fetchBlackHoleInfo('IRAS 04416+1215')">IRAS 04416+1215</button>
         <button class="button" onclick="fetchBlackHoleInfo('H0507+164')">H0507+164</button>
         <button class="button" onclick="fetchBlackHoleInfo('Ark120')">Ark120</button>
         <button class="button" onclick="fetchBlackHoleInfo('MCG+08-11-011')">MCG+08-11-011</button>
@@ -102,14 +122,12 @@
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J074352+271240')">SDSS J074352+271240</button>
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J075051+245409')">SDSS J075051+245409</button>
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J075101+291419')">SDSS J075101+291419</button>
-        <button class="button" onclick="fetchBlackHoleInfo('Mrk382')">Mrk382</button>
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J075949+320024')">SDSS J075949+320024</button>
         <button class="button" onclick="fetchBlackHoleInfo('PG0804+761')">PG0804+761</button>
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J081441+212919')">SDSS J081441+212919</button>
         <button class="button" onclick="fetchBlackHoleInfo('APM08279+5255')">APM08279+5255</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC2617')">NGC2617</button>
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J083553+055317')">SDSS J083553+055317</button>
-        <button class="button" onclick="fetchBlackHoleInfo('S5 0836+71')">S5 0836+71</button>
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J084533+474935')">SDSS J084533+474935</button>
         <button class="button" onclick="fetchBlackHoleInfo('PG0844+349')">PG0844+349</button>
         <button class="button" onclick="fetchBlackHoleInfo('Mrk704')">Mrk704</button>
@@ -121,16 +139,12 @@
         <button class="button" onclick="fetchBlackHoleInfo('SDSS J101000+300322')">SDSS J101000+300322</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC3516')">NGC3516</button>
         <button class="button" onclick="fetchBlackHoleInfo('SBS1116+583A')">SBS1116+583A</button>
-        <button class="button" onclick="fetchBlackHoleInfo('SBS1116+603')">SBS1116+603</button>
         <button class="button" onclick="fetchBlackHoleInfo('Arp151')">Arp151</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC3783')">NGC3783</button>
-        <button class="button" onclick="fetchBlackHoleInfo('MCG+06-26-012')">MCG+06-26-012</button>
-        <button class="button" onclick="fetchBlackHoleInfo('SDSS J1139+3355')">SDSS J1139+3355</button>
         <button class="button" onclick="fetchBlackHoleInfo('UGC06728')">UGC06728</button>
         <button class="button" onclick="fetchBlackHoleInfo('Mrk1310')">Mrk1310</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC4051')">NGC4051</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC4151')">NGC4151</button>
-        <button class="button" onclick="fetchBlackHoleInfo('PG1211+143')">PG1211+143</button>
         <button class="button" onclick="fetchBlackHoleInfo('Mrk202')">Mrk202</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC4253')">NGC4253</button>
         <button class="button" onclick="fetchBlackHoleInfo('Mrk50')">Mrk50</button>
@@ -138,13 +152,10 @@
         <button class="button" onclick="fetchBlackHoleInfo('PG1226+023')">PG1226+023</button>
         <button class="button" onclick="fetchBlackHoleInfo('PG1229+204')">PG1229+204</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC4593')">NGC4593</button>
-        <button class="button" onclick="fetchBlackHoleInfo('WAS61')">WAS61</button>
-        <button class="button" onclick="fetchBlackHoleInfo('PG1247+267')">PG1247+267</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC4748')">NGC4748</button>
         <button class="button" onclick="fetchBlackHoleInfo('PG1307+085')">PG1307+085</button>
         <button class="button" onclick="fetchBlackHoleInfo('MCG-06-30-15')">MCG-06-30-15</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC5273')">NGC5273</button>
-        <button class="button" onclick="fetchBlackHoleInfo('IC4329A')">IC4329A</button>
         <button class="button" onclick="fetchBlackHoleInfo('Mrk279')">Mrk279</button>
         <button class="button" onclick="fetchBlackHoleInfo('PG1411+442')">PG1411+442</button>
         <button class="button" onclick="fetchBlackHoleInfo('NGC5548')">NGC5548</button>
@@ -152,6 +163,7 @@
 
     <!-- Button zurück zur Hauptseite -->
     <button id="backToHomeButton" onclick="window.location.href='index.html';">Zurück zur Startseite</button>
+
 
 
     <!-- Script für Infos von Schwarzem Loch zu holen (Verbindung zu Backend)-->
